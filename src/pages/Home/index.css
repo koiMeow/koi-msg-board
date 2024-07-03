@@ -1,0 +1,116 @@
+body {
+  background-color: black;
+}
+
+.top {
+  background-color: #0c0a66;
+  padding-left: 10.5%;
+  padding-right: 10.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  position: fixed;
+  top: 0;
+  width: 79%;
+  z-index: 3;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 0.2px;
+}
+
+.home-button,
+.contact-buttons > button {
+  background-color: #0c0a66;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+
+.home-button {
+  color: rgb(255, 255, 130);
+  padding: 0.24em 0.4em;
+  font-family: "Times New Roman", "新細明體", "PMingLiU", serif;
+  font-size: 27px;
+}
+
+.home-button:hover {
+  background-color: rgb(50, 50, 140);
+  color: white;
+  cursor: pointer;
+}
+
+.contact-buttons > button {
+  color: #aaa;
+  padding: 0.3em 0.4em 0.24em 0.4em;
+  font-family: "Times New Roman", "新細明體", "PMingLiU", serif;
+  font-size: 14px;
+}
+
+.contact-buttons > button:hover {
+  background-color: rgb(50, 50, 140);
+  color: white;
+  cursor: pointer;
+}
+
+.main {
+  color: white;
+  min-height: 100vh;
+  padding-left: 10.5%;
+  padding-right: 10.5%;
+}
+
+.tabs {
+  background-color: black;
+  margin-top: 44px;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  width: 79%;
+  height: 45px;
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  border: 1px solid #666;
+  background-color: #444;
+  padding: 0 1.7ex;
+  text-decoration: none;
+  color: #ddd;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.tab.active {
+  color: #333;
+  background-color: #ccc;
+}
+
+.tab:hover {
+  cursor: pointer;
+}
+
+.content {
+  color: #bbb;
+  margin-top: 90px;
+  font-family: Inconsolata, sans-serif;
+  padding: 3px 0 0 0;
+}
+
+.postitem {
+  display: flex;
+  align-items: center;
+  background-color: rgb(50, 50, 50);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid rgb(100, 100, 100);
+}
