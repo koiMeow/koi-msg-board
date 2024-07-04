@@ -14,10 +14,10 @@
           ...doc.data(),
           id: doc.id,
         }));
+        
+        messageData.sort((a, b) => a.timestamp - b.timestamp);
         setData(messageData);
       });
-
-      messageData.sort((a, b) => a.timestamp - b.timestamp);
 
       return () => unsubscribe();
     }, []);
