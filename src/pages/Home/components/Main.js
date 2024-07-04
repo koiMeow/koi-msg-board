@@ -2,9 +2,9 @@ import { useState } from "react";
 
 import Post from "./Post";
 
-const Main = () => {
-  const [activeTab, setActiveTab] = useState("熱門看板");
-  const tabs = ["熱門看板", "分類看板"];
+const Main = ({ msgList }) => {
+  const tabs = ["匿名留言", "開發中..."];
+  const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
     <div className="main">
@@ -20,9 +20,9 @@ const Main = () => {
         ))}
       </div>
       <div className="content">
-        <Post
-          msg={"測試訊息"}
-        />
+        {msgList.map((msg) => {
+          return (<Post key={msg.id} message={msg} />)
+        })}
       </div>
     </div>
   );

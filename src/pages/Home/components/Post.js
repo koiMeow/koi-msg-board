@@ -1,6 +1,6 @@
-const Post = ({ msg }) => {
+const Post = ({ message }) => {
     return <div className="postitem">
-        {msg}
+        {message.message}
     </div>
 }
 
