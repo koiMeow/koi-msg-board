@@ -17,6 +17,8 @@
         setData(messageData);
       });
 
+      messageData.sort((a, b) => a.timestamp - b.timestamp);
+
       return () => unsubscribe();
     }, []);
 
