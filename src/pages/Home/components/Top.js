@@ -4,6 +4,7 @@ import { v4 } from "uuid";
 const Top = ({ add }) => {
   const [formData, setFormData] = useState({
     message: "",
+    time: ""
   });
 
   const handleChange = (e) => {
@@ -26,6 +27,7 @@ const Top = ({ add }) => {
     await add({
       id: v4(),
       message: formData.message,
+      time: new Date(),
     });
 
     setFormData({ message: "" });

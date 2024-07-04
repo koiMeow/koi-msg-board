@@ -119,6 +119,7 @@ body {
   margin: 10px 0;
   border-bottom: 1px solid #666;
   font-size: 1rem;
+  justify-content: space-between;
 }
 
 .bottom {
@@ -152,6 +153,10 @@ body {
   font-size: 1rem;
   background-color: #444;
   color: #ddd;
+}
+
+.bottom > button:hover {
+  cursor: pointer;
 }
 
 /* 響應式設計 */

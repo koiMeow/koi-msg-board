@@ -15,20 +15,15 @@
           id: doc.id,
         }));
 
-        messageData.sort((b, a) => a.timestamp - b.timestamp);
+        messageData.sort((b, a) => a.time - b.time);
         setData(messageData);
       });
 
       return () => unsubscribe();
     }, []);
 
-    const addMessage = async (formData) => {
-      await addDoc(collection(db, "messages"), {
-        ...formData,
-        timestamp: new Date(),
-      });
-    };
-
+    const addMessage = (formData) => addDoc(collection(db, "messages"), formData);
+    
     return (
       <div>
         <Top add={addMessage} />
