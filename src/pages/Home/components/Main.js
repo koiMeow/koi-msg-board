@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 import Post from "./Post";
 
 const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
-  const tabs = ["匿名留言", "開發中..."];
+  const tabs = ["匿名留言", "私人群組", "特定主題"];
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   const [formData, setFormData] = useState({
@@ -73,11 +73,11 @@ const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
                 </div>
               ))}
             </div>
-
             <div className="content">
-              {msgList.map((msg) => {
-                return <Post key={msg.id} message={msg} />;
-              })}
+              {activeTab === "匿名留言" &&
+                msgList.map((msg) => {
+                  return <Post key={msg.id} message={msg} />;
+                })}
             </div>
           </>
         ) : (
