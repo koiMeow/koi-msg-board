@@ -95,7 +95,7 @@ const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
       <div className="bottom">
         {isLoggedIn ? (
           <>
-            <>
+            <div className="input-area">
               <div className="useremail">{user.email}</div>
               <input
                 type="text"
@@ -104,10 +104,10 @@ const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
                 onChange={handleChange}
                 onKeyDown={handleKeyDown}
               />
-              <button className="function-button" onClick={sendMessage}>
+              <button onClick={sendMessage}>
                 送出
               </button>
-            </>
+            </div>
             <button className="function-button" onClick={handleSignOut}>
               登出
             </button>

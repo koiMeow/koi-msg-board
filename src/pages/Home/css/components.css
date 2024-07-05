@@ -80,11 +80,32 @@
   justify-content: space-between;
 }
 
-.bottom > input {
-  width: 60%;
-  height: 60%;
+.input-area {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 1em;
 }
 
-.useremail {
+.input-area > input {
+  width: 60%;
+  height: 60%;
+  font-size: 1em;
+}
+
+.input-area > button {
+  color: #333;
+  background-color: #ccc;
+  border: none;
+  box-shadow: none;
+  height: 60%;
+  font-family: "Times New Roman", "新細明體", "PMingLiU", serif;
+  font-size: 0.875rem;
+}
+
+.input-area > button:hover {
   color: white;
+  background-color: #333;
 }
