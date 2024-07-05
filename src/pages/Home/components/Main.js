@@ -16,33 +16,15 @@ const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleSignUp = async () => {
-    try {
-      await register(email, password);
-      window.alert("註冊成功");
-    } catch (error) {
-      window.alert("註冊失敗");
-      console.error("註冊失敗: ", error.message);
-    }
+    await register(email, password);
   };
 
   const handleSignIn = async () => {
-    try {
-      await login(email, password);
-      window.alert("登入成功");
-    } catch (error) {
-      window.alert("登入失敗");
-      console.error("登入失敗: ", error.message);
-    }
+    await login(email, password);
   };
 
   const handleSignOut = async () => {
-    try {
-      await logout();
-      window.alert("登出成功");
-    } catch (error) {
-      window.alert("登出失敗");
-      console.error("登出失敗: ", error.message);
-    }
+    await logout();
   };
 
   // 輸入訊息
@@ -86,11 +68,15 @@ const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
             </div>
           ))}
         </div>
-        {isLoggedIn ? (<div className="content">
-          {msgList.map((msg) => {
-            return <Post key={msg.id} message={msg} />;
-          })}
-        </div>) : <div></div>}
+        {isLoggedIn ? (
+          <div className="content">
+            {msgList.map((msg) => {
+              return <Post key={msg.id} message={msg} />;
+            })}
+          </div>
+        ) : (
+          <div></div>
+        )}
       </div>
       <div className="bottom">
         {isLoggedIn ? (
@@ -104,9 +90,7 @@ const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
                 onChange={handleChange}
                 onKeyDown={handleKeyDown}
               />
-              <button onClick={sendMessage}>
-                送出
-              </button>
+              <button onClick={sendMessage}>送出</button>
             </div>
             <button className="function-button" onClick={handleSignOut}>
               登出
