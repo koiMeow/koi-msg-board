@@ -15,6 +15,7 @@ const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
   // 註冊及登入帳號
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const handleSignUp = async () => {
     await register(email, password);
   };
@@ -25,6 +26,8 @@ const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
 
   const handleSignOut = async () => {
     await logout();
+    setEmail("");
+    setPassword("");
   };
 
   // 輸入訊息
@@ -57,23 +60,26 @@ const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
   return (
     <>
       <div className="main">
-        <div className="tabs">
-          {tabs.map((tab) => (
-            <div
-              key={tab}
-              className={`tab ${activeTab === tab ? "active" : ""}`}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </div>
-          ))}
-        </div>
         {isLoggedIn ? (
-          <div className="content">
-            {msgList.map((msg) => {
-              return <Post key={msg.id} message={msg} />;
-            })}
-          </div>
+          <>
+            <div className="tabs">
+              {tabs.map((tab) => (
+                <div
+                  key={tab}
+                  className={`tab ${activeTab === tab ? "active" : ""}`}
+                  onClick={() => setActiveTab(tab)}
+                >
+                  {tab}
+                </div>
+              ))}
+            </div>
+
+            <div className="content">
+              {msgList.map((msg) => {
+                return <Post key={msg.id} message={msg} />;
+              })}
+            </div>
+          </>
         ) : (
           <div></div>
         )}
@@ -100,15 +106,15 @@ const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
           <>
             <div></div>
             <div className="login-area">
-              <>電子郵件</>
               <input
                 type="email"
+                placeholder="信箱"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <>密碼</>
               <input
                 type="password"
+                placeholder="密碼"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />

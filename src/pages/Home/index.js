@@ -44,12 +44,22 @@ const Home = () => {
     }
   };
 
-  const loginAccount = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password);
+  const loginAccount = async (email, password) => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      window.alert("登入成功");
+    } catch (error) {
+      window.alert("帳號或密碼錯誤");
+    }
   };
 
-  const logoutAccount = () => {
-    signOut(auth);
+  const logoutAccount = async () => {
+    try {
+      signOut(auth);
+      window.alert("登出成功");
+    } catch (error) {
+      window.alert("登出失敗");
+    }
   };
 
   return (

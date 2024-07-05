@@ -5,9 +5,10 @@
   top: 0;
   z-index: 3;
   display: flex;
-  width: 79%;
+  width: 100%;
   height: 45px;
   font-size: 1rem;
+  overflow-x: auto; /* Add to ensure tabs do not overflow */
 }
 
 .tab {
@@ -21,7 +22,7 @@
   box-sizing: border-box;
   text-align: center;
   align-items: center;
-  font-size: 1.125rem; /* 18px相當於1.125rem */
+  font-size: 1.125rem; /* 18px相当于1.125rem */
 }
 
 .tab.active {
