@@ -1,0 +1,81 @@
+.tabs {
+  background-color: black;
+  margin-top: 44px;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  width: 79%;
+  height: 45px;
+  font-size: 1rem;
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  border: 1px solid #666;
+  background-color: #444;
+  padding: 0 1.7ex;
+  text-decoration: none;
+  color: #ddd;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  font-size: 1.125rem; /* 18px相當於1.125rem */
+}
+
+.tab.active {
+  color: #333;
+  background-color: #ccc;
+}
+
+.tab:hover {
+  cursor: pointer;
+}
+
+.content {
+  color: white;
+  margin-top: 90px;
+  font-family: Inconsolata, sans-serif;
+  padding: 3px 0 0 0;
+  font-size: 1rem;
+}
+
+.home-button {
+  background-color: transparent;
+  color: rgb(255, 255, 130);
+  border: none;
+  box-shadow: none;
+  padding: 0.24em 0.4em;
+  font-family: "Times New Roman", "新細明體", "PMingLiU", serif;
+  font-size: 1.6875rem;
+}
+
+.function-button {
+  background-color: transparent;
+  color: #aaa;
+  border: none;
+  box-shadow: none;
+  height: 100%;
+  padding: 0.3em 0.4em 0.24em 0.4em;
+  font-family: "Times New Roman", "新細明體", "PMingLiU", serif;
+  font-size: 0.875rem;
+}
+
+.home-button:hover,
+.function-button:hover {
+  background-color: rgb(50, 50, 140);
+  color: white;
+  cursor: pointer;
+}
+
+.postitem {
+  display: flex;
+  align-items: center;
+  color: #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  border-bottom: 1px solid #666;
+  font-size: 1rem;
+  justify-content: space-between;
+}

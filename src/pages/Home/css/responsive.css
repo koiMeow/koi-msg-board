@@ -1,0 +1,81 @@
+@media (max-width: 1200px) {
+  .top,
+  .tabs,
+  .bottom {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+  }
+
+  .home-button {
+    font-size: 1.5rem;
+  }
+
+  .function-buttons > button {
+    font-size: 0.8125rem;
+  }
+
+  .tab {
+    font-size: 1rem;
+  }
+
+  .bottom > input,
+  .bottom > button {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .top,
+  .tabs,
+  .bottom {
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 96%;
+  }
+
+  .home-button {
+    font-size: 1.375rem;
+  }
+
+  .function-buttons > button {
+    font-size: 0.75rem;
+  }
+
+  .tab {
+    font-size: 0.9375rem;
+  }
+
+  .bottom > input,
+  .bottom > button {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .top,
+  .tabs,
+  .bottom {
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 98%;
+  }
+
+  .home-button {
+    font-size: 1.25rem;
+  }
+
+  .function-buttons > button {
+    font-size: 0.6875rem;
+  }
+
+  .tab {
+    font-size: 0.875rem;
+    padding: 0 1ex;
+  }
+
+  .bottom > input,
+  .bottom > button {
+    font-size: 0.75rem;
+  }
+}

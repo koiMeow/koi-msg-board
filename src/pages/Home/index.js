@@ -1,7 +1,7 @@
   import Top from "./components/Top";
   import Main from "./components/Main";
 
-  import "./index.css";
+  import "./css/index.css";
   import { useEffect, useState } from "react";
   import { db, collection, addDoc, onSnapshot } from "../../firebase";
 
@@ -26,8 +26,8 @@
     
     return (
       <div>
-        <Top add={addMessage} />
-        <Main msgList={data} />
+        <Top />
+        <Main msgList={data} add={addMessage} isLoggedIn={false}/>
       </div>
     );
   };

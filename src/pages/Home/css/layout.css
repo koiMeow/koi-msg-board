@@ -1,0 +1,46 @@
+.top {
+  background-color: #0c0a66;
+  padding-left: 10.5%;
+  padding-right: 10.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 44px;
+  position: fixed;
+  top: 0;
+  width: 79%;
+  z-index: 3;
+  font-size: 1rem;
+}
+
+.main {
+  color: white;
+  min-height: 100vh;
+  padding-left: 10.5%;
+  padding-right: 10.5%;
+  font-size: 1rem;
+}
+
+.bottom {
+  background-color: #0c0a66;
+  padding-left: 10.5%;
+  padding-right: 10.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 44px;
+  position: fixed;
+  bottom: 0;
+  width: 79%;
+  z-index: 3;
+  font-size: 1rem;
+  gap: 0.5em;
+}
+
+.logginarea {
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    font-family: "Times New Roman", "新細明體", "PMingLiU", serif;
+    gap: 0.5em;
+}
