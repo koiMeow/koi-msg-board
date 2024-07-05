@@ -43,7 +43,7 @@ const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
       window.alert("登出失敗");
       console.error("登出失敗: ", error.message);
     }
-  }
+  };
 
   // 輸入訊息
   const handleChange = (e) => {
@@ -95,16 +95,22 @@ const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
       <div className="bottom">
         {isLoggedIn ? (
           <>
-            <div className="useremail">{user.email}</div>
-            <input
-              type="text"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              onKeyDown={handleKeyDown}
-            />
-            <button className="function-button" onClick={sendMessage}>送出</button>
-            <button className="function-button" onClick={handleSignOut}>登出</button>
+            <>
+              <div className="useremail">{user.email}</div>
+              <input
+                type="text"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                onKeyDown={handleKeyDown}
+              />
+              <button className="function-button" onClick={sendMessage}>
+                送出
+              </button>
+            </>
+            <button className="function-button" onClick={handleSignOut}>
+              登出
+            </button>
           </>
         ) : (
           <>
