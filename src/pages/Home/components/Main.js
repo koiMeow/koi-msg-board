@@ -86,11 +86,11 @@ const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
             </div>
           ))}
         </div>
-        <div className="content">
+        {isLoggedIn ? (<div className="content">
           {msgList.map((msg) => {
             return <Post key={msg.id} message={msg} />;
           })}
-        </div>
+        </div>) : <div></div>}
       </div>
       <div className="bottom">
         {isLoggedIn ? (
@@ -115,7 +115,7 @@ const Main = ({ msgList, add, register, login, logout, isLoggedIn, user }) => {
         ) : (
           <>
             <div></div>
-            <div className="logginarea">
+            <div className="login-area">
               <>電子郵件</>
               <input
                 type="email"

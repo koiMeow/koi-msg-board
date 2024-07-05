@@ -37,10 +37,19 @@
   gap: 0.5em;
 }
 
-.logginarea {
-    color: #aaa;
-    display: flex;
-    align-items: center;
-    font-family: "Times New Roman", "新細明體", "PMingLiU", serif;
-    gap: 0.5em;
+.login-area {
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  font-family: "Times New Roman", "新細明體", "PMingLiU", serif;
+  gap: 0.5em;
+}
+
+.input-area {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 1em;
 }
