@@ -79,3 +79,12 @@
   font-size: 1rem;
   justify-content: space-between;
 }
+
+.bottom > input {
+  width: 80%;
+  height: 60%;
+}
+
+.useremail {
+  color: white;
+}
